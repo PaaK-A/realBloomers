@@ -38,6 +38,14 @@ function selectSimilarProducts_ctr($categoryID){
     
 }
 
+//--SELECT Products limit/
+function selectProductsLimit_ctr(){
+    $selectsql= new product_class();
+
+    return $selectsql->selectProductsLimit_cls();
+    
+}
+
 //--update product cls--//
 function updateProduct_ctr($pcategory,$pbrand,$ptitle,$pprice,$pdescription,$pimage,$pkeywords,$productID){
     $updateItem= new product_class();

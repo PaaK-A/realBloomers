@@ -9,7 +9,7 @@ function pageheader($minititle,$maintitle){?>
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.php">
-								<img src="../assets/img/logo.png" alt="">
+								<img src="/realBloomers/assets/img/logo.png" alt="">
 							</a>
 						</div>
 						<!-- logo -->
@@ -17,14 +17,10 @@ function pageheader($minititle,$maintitle){?>
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="#">Home</a>
-									<ul class="sub-menu">
-										<li><a href="index.php">Static Home</a></li>
-										<li><a href="index_2.php">Slider Home</a></li>
-									</ul>
+								<li><a href="/realBloomers/view/shop.php">Home</a>
 								</li>
-								<li><a href="about.php">About</a></li>
-								<li><a href="#">Pages</a>
+								<li><a href="/realBloomers/about.html">About</a></li>
+								<li hidden><a href="#">Pages</a>
 									<ul class="sub-menu">
 										<li><a href="404.php">404 page</a></li>
 										<li><a href="about.php">About</a></li>
@@ -35,24 +31,20 @@ function pageheader($minititle,$maintitle){?>
 										<li><a href="shop.php">Shop</a></li>
 									</ul>
 								</li>
-								<li><a href="news.php">News</a>
-									<ul class="sub-menu">
-										<li><a href="news.php">News</a></li>
-										<li><a href="single-news.php">Single News</a></li>
-									</ul>
+								<li><a href="/realBloomers/view/advice/all_advice.php">Advice</a>
 								</li>
-								<li><a href="contact.php">Contact</a></li>
+								<li><a href="realBloomers/contact.php">Contact</a></li>
 								<li><a href="shop.php">Shop</a>
 									<ul class="sub-menu">
-										<li><a href="shop.php">Shop</a></li>
-										<li><a href="checkout.php">Check Out</a></li>
-										<li><a href="cart.php">Cart</a></li>
+										<li><a href="realBloomers/view/shop.php">Shop</a></li>
+										<li><a href="realBloomers/view/checkout.php">Check Out</a></li>
+										<li><a href="realBloomers/view/cart.php">Cart</a></li>
 									</ul>
 								</li>
 								<li>
 									<div class="header-icons">
-                                        <a class="shopping-cart" href="../login/logout.php">LOGOUT</a> 
-										<a class="shopping-cart" href="cart.php"><i class="fas fa-shopping-cart"></i></a>
+                                        <a class="shopping-cart" href="realBloomers/login/logout.php">LOGOUT</a> 
+										<a class="shopping-cart" href="realBloomers/cart.php"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
@@ -131,22 +123,22 @@ function pagefooter(){
 					<div class="footer-box pages">
 						<h2 class="widget-title">Pages</h2>
 						<ul>
-							<li><a href="index.php">Home</a></li>
-							<li><a href="about.php">About</a></li>
-							<li><a href="services.php">Shop</a></li>
-							<li><a href="news.php">News</a></li>
-							<li><a href="contact.php">Contact</a></li>
+							<li><a href="/realBloomers/index.php">Home</a></li>
+							<li><a href="/realBloomers/about.html">About</a></li>
+							<li><a href="/realBloomers/view/shop.php">Shop</a></li>
+							<li><a href="/realBloomers/view/advice/all_advice.php">Advice</a></li>
+							<li><a href="/realBloomers/contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box subscribe">
-						<h2 class="widget-title">Subscribe</h2>
-						<p>Subscribe to our mailing list to get the latest updates.</p>
-						<form action="index.php">
+						<h2 class="widget-title">Be You</h2>
+						<p>Feel free to express yourself the only way you can.</p>
+						<!-- <form action="index.php">
 							<input type="email" placeholder="Email">
 							<button type="submit"><i class="fas fa-paper-plane"></i></button>
-						</form>
+						</form> -->
 					</div>
 				</div>
 			</div>
@@ -161,7 +153,7 @@ function pagefooter(){
 				<div class="col-lg-6 col-md-12">
 					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.</p>
 				</div>
-				<div class="col-lg-6 text-right col-md-12">
+				<!-- <div class="col-lg-6 text-right col-md-12">
 					<div class="social-icons">
 						<ul>
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -170,7 +162,7 @@ function pagefooter(){
 							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

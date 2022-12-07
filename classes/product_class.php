@@ -55,6 +55,19 @@ class product_class extends db_connection{
 		return $this -> db_fetch_all($selsql);
 	}
 
+	/*** 
+	 SELECT products
+	 limit to 3
+	 **/
+	public function selectProductsLimit_cls(){
+		//write query
+		
+		$selsql = "SELECT * FROM products LIMIT 3";
+
+		//execute 	
+		return $this -> db_fetch_all($selsql);
+	}
+
 	//-update product--//
 	public function updateProduct_cls($pcategory,$pbrand,$ptitle,$pprice,$pdescription,$pimage,$pkeywords,$productID){
 		//write query
