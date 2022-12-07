@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="output.css">
+
+    <style>
+        input:focus{
+            outline: none;
+        }
+        /* input[type="text"]{
+            background-color:rgb(41 37 36);
+        } */
+    </style>
+    
+</head>
+
+<body class=" ">
+    <!-- logo, searchbar,signout -->
+    <div class="hidden md:flex md:flex-row md:flex-nowrap md:grid md:grid-cols-11 text-white">
+        <!-- logo -->
+        <h1 class="col-span-2 px-6 py-3 bg-stone-900 font-bold text-xl uppercase">Bloomers</h1>
+
+        <!-- search bar -->
+        <div class="border-b bg-stone-800 flex-1 px-10 col-start-3 col-end-11 text-black hover:shadow-lg"><input type="text" placeholder="Search" class="w-full h-full"></div>
+
+        <!-- signout -->
+        <div class="flex-none text-center col-end-12 col-span-1 py-4 text-sm text-stone-400 bg-stone-900 hover:text-white"><a href="#">Sign out</a></div>
+    </div>
+
+    <!-- content wrapper div -->
+    <div class="grid md:grid-cols-11">    
+
+       
+
+        <!-- navigation bar div  -->
+        <div class="bg-emerald-900 md:bg-emerald-700  md:col-span-2 md:flex md:justify-start md:h-screen">
+
+            <!-- navigation bar -->
+            <nav class="text-left">
+
+                <!-- div for naigation bar content -->
+                <div class="flex justify-between items-center pt-4 pl-6 md:pt-6 text-white md:hidden">
+          
+                    <h1 class="font-bold uppercase text-lg"> 
+                        <a href="#" class="hover:text-gray-700">Bloomers</a>
+                    </h1>
+
+                    <!-- div for navigation dropdown menu -->
+                    <div class="px-6 cursor-pointer" id="dd_menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+
+                
+                <div class="px-6 py-3">
+                    <ul class=" mt-2 hidden md:block text-white font-medium" id="menu">                   
+                        <li class="text-stone-700 py-1">
+                            <a href="#" class=" border-primary">
+                                
+                                <!--were going to have icons in here.
+                                span incase we want to style it seperate from icons  -->
+                                <i class="fa-solid fa-house mr-1"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-stone-700">
+                                <!--were going to have icons in here.
+                                span incase we want to style it seperate from icons  -->
+                                <i class="fa-solid fa-circle-plus mr-1"></i>
+                                <span>Category</span>
+                            </a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-stone-700">
+                                <!--were going to have icons in here.
+                                span incase we want to style it seperate from icons  -->
+                                <i class="fa-solid fa-circle-plus mr-1"></i>
+                                <span>Brand</span>
+                            </a>
+                        </li>
+                        <li class="py-2">
+                            <a href="#" class="hover:text-stone-700">
+                                <!--were going to have icons in here.
+                                span incase we want to style it seperate from icons  -->
+                                <i class="fa-solid fa-circle-plus mr-1"></i>
+                                <span>Products</span>
+                            </a>
+                        </li>
+                        <li class="py-1">
+                            <a href="#" class="hover:text-stone-700">
+                                <!--were going to have icons in here.
+                                span incase we want to style it seperate from icons  -->
+                                <i class="fa-solid fa-circle-question mr-1"></i>                       
+                                <span>Advice</span>
+                            </a>
+                        </li>
+                        <li class="py-1">
+                            <a href="#" class="hover:text-stone-700">
+                                <!--were going to have icons in here.
+                                span incase we want to style it seperate from icons  -->
+                                <i class="fa-solid fa-arrow-right-arrow-left mr-1"></i>                     
+                                <span>Orders</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <!-- END OF NAV DIV -->
+
+        <main class="md:col-span-9">
+            
+            <div class="mx-10 my-4">
+                
+                <header class="">
+                    <h2 class="flex justify-center md:justify-start text-4xl text-stone-600 mt-2 font-bold ">Dashboard</h2>
+                </header>
+                
+                <form action= "../actions/add_product.php" method="POST" enctype="multipart/form-data">
+        
+                    <!-- dropdown menu of categories -->
+                    <h4><label for="productcat">Choose a category:</label></h4>
+            
+            
+                    <!-- value is categoryid -->
+                    <select name="productcat" id="productcategory">
+                    <?php get_allCategories_fxn();?>
+                    </select>
+                    
+                    
+                    
+                    <!-- dropdown menu of brand -->
+                    <h4><label for="pdtbrand">Choose a brand:</label></h4>
+            
+                    <!-- value is brandid -->
+                    <select name="pdtbrand" id="productbrand">
+                    <?php get_allBrands_fxn();?>
+                    </select>
+            
+                    <!-- create title form. -->
+                    <h4>Title</h4>
+                    <input type="text" name="productTitle" placeholder="Enter Title" id="producttitle" required> 
+            
+                    <!--make Price text box--> 
+                    <h4>Price</h4>
+                    <input type="text" name="productPrice" placeholder="Enter Price" id="productprice" required>  
+            
+                    <!--make description text box--> 
+                    <h4>Description</h4>
+                    <textarea name="productDescription" placeholder="Enter Description" id="productdescription"></textarea>
+                    
+                   <!--make image text box--> 
+                   <h4>Product Image</h4>
+                   <label for="img">Select image:</label>
+                    <input type="file" id="img" name="productImg" accept="image/*">
+            
+                    <!--make keywords text box--> 
+                    <h4>Keywords</h4>
+                    <textarea name="productKeywords" placeholder="Enter Keywords" id="keywords"></textarea>
+                    <br>
+                    <br>
+                    <!--submit button-->
+                    <input type="submit" name="productinfo" value="Add">
+                </form>
+
+            </div>
+
+        </main>
+
+              
+    </div>
+ 
+
+    <script src="https://kit.fontawesome.com/78711647c2.js" crossorigin="anonymous"></script>
+</body>
+</html>
