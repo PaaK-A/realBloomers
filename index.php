@@ -1,3 +1,5 @@
+<?php include("controllers/product_contrroller.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +9,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Fruitkha</title>
+	<title>Bloomers</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
@@ -60,13 +62,9 @@
 						<nav class="main-menu">
 							<ul>
 								<li class="current-list-item"><a href="#">Home</a>
-									<ul class="sub-menu">
-										<li><a href="index.html">Static Home</a></li>
-										<li><a href="index_2.html">Slider Home</a></li>
-									</ul>
 								</li>
 								<li><a href="about.html">About</a></li>
-								<li><a href="#">Pages</a>
+								<li hidden><a href="#">Pages</a>
 									<ul class="sub-menu">
 										<li><a href="404.html">404 page</a></li>
 										<li><a href="about.html">About</a></li>
@@ -79,22 +77,17 @@
 								</li>
 								<li><a href="news.html">News</a>
 									<ul class="sub-menu">
-										<li><a href="news.html">News</a></li>
-										<li><a href="single-news.html">Single News</a></li>
+										<li><a href="view/advice/all_advice.php">Advice</a></li>
+										<li hidden><a href="single-news.html">Single News</a></li>
 									</ul>
 								</li>
 								<li><a href="contact.html">Contact</a></li>
-								<li><a href="shop.html">Shop</a>
-									<ul class="sub-menu">
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="single-product.html">Single Product</a></li>
-										<li><a href="cart.html">Cart</a></li>
-									</ul>
+								<li><a href="view/shop.php">Shop</a>
 								</li>
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+										<a class="shopping-cart" href="../login/login.php">LOGIN</a> 
+										<a class="shopping-cart" href="login/login.php"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
@@ -139,7 +132,7 @@
 							<p class="subtitle">Fresh & Organic</p>
 							<h1>Delicious Seasonal Fruits</h1>
 							<div class="hero-btns">
-								<a href="shop.html" class="boxed-btn">Fruit Collection</a>
+								<a href="view/shop.php" class="boxed-btn">Products</a>
 								<a href="contact.html" class="bordered-btn">Contact Us</a>
 							</div>
 						</div>
@@ -161,8 +154,8 @@
 							<i class="fas fa-shipping-fast"></i>
 						</div>
 						<div class="content">
-							<h3>Free Shipping</h3>
-							<p>When order over $75</p>
+							<h3>Quick Delivery</h3>
+							<!-- <p>When order over $75</p> -->
 						</div>
 					</div>
 				</div>
@@ -194,54 +187,7 @@
 	</div>
 	<!-- end features list section -->
 
-	<!-- product section -->
-	<div class="product-section mt-150 mb-150">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-title">	
-						<h3><span class="orange-text">Our</span> Products</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4 col-md-6 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="images/testnikes.png" alt=""></a>
-						</div>
-						<h3>Strawberry</h3>
-						<p class="product-price"><span>Per Kg</span> 85$ </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
-						</div>
-						<h3>Berry</h3>
-						<p class="product-price"><span>Per Kg</span> 70$ </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
-						</div>
-						<h3>Lemon</h3>
-						<p class="product-price"><span>Per Kg</span> 35$ </p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end product section -->
-
+	
 	<!-- cart banner section -->
 	<section class="cart-banner pt-100 pb-100">
     	<div class="container">
@@ -260,7 +206,7 @@
                     </div>
                 </div>
                 <!--Content Column-->
-                <div class="content-column col-lg-6">
+                <div class="content-column col-lg-6" >
 					<h3><span class="orange-text">Deal</span> of the month</h3>
                     <h4>Hikan Strwaberry</h4>
                     <div class="text">Quisquam minus maiores repudiandae nobis, minima saepe id, fugit ullam similique! Beatae, minima quisquam molestias facere ea. Perspiciatis unde omnis iste natus error sit voluptatem accusant</div>
@@ -343,7 +289,7 @@
 						<h2>We are <span class="orange-text">Fruitkha</span></h2>
 						<p>Etiam vulputate ut augue vel sodales. In sollicitudin neque et massa porttitor vestibulum ac vel nisi. Vestibulum placerat eget dolor sit amet posuere. In ut dolor aliquet, aliquet sapien sed, interdum velit. Nam eu molestie lorem.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis illo repellat veritatis minus, et labore minima mollitia qui ducimus.</p>
-						<a href="about.html" class="boxed-btn mt-4">know more</a>
+						<a href="about.html" class="boxed-btn mt-4">Know more</a>
 					</div>
 				</div>
 			</div>
@@ -368,7 +314,7 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-title">	
-						<h3><span class="orange-text">Our</span> News</h3>
+						<h3><span class="orange-text">Our</span> Advice</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
 					</div>
 				</div>
@@ -420,7 +366,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<a href="news.html" class="boxed-btn">More News</a>
+					<a href="view/advice/all_advice.php" class="boxed-btn">More Advice</a>
 				</div>
 			</div>
 		</div>
@@ -428,7 +374,7 @@
 	<!-- end latest news -->
 
 	<!-- logo carousel -->
-	<div class="logo-carousel-section">
+	<div class="logo-carousel-section" hidden>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -462,7 +408,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
 						<h2 class="widget-title">About us</h2>
-						<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+						<p>At our plant shop, you'll find a wide range of healthy, carefully curated plants along with expert advice and support to help you create the perfect green oasis in your home or office.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -479,15 +425,15 @@
 					<div class="footer-box pages">
 						<h2 class="widget-title">Pages</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="#">Home</a></li>
 							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Shop</a></li>
-							<li><a href="news.html">News</a></li>
+							<li><a href="view/shop.php">Shop</a></li>
+							<li><a href="view/advice/all_advice.php">News</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-3 col-md-6" >
 					<div class="footer-box subscribe">
 						<h2 class="widget-title">Subscribe</h2>
 						<p>Subscribe to our mailing list to get the latest updates.</p>
@@ -510,7 +456,7 @@
 					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.</p>
 				</div>
 				<div class="col-lg-6 text-right col-md-12">
-					<div class="social-icons">
+					<div class="social-icons" hidden>
 						<ul>
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
