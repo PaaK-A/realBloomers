@@ -1,6 +1,6 @@
 <?php 
 include("../../navbars/header.php");
-include("../../controllers/product_contrroller.php");
+include("../../product_contrroller.php");
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +55,7 @@ include("../../controllers/product_contrroller.php");
 	<div class="latest-news mt-150 mb-150">
 		<div class="container">
 			<div class="row">
+				
 				<div class="col-lg-4 col-md-6">
 					<div class="single-latest-news">
 						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
@@ -69,6 +70,7 @@ include("../../controllers/product_contrroller.php");
 						</div>
 					</div>
 				</div>
+				
 			</div>
 
 			<div class="row">

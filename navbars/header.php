@@ -33,18 +33,13 @@ function pageheader($minititle,$maintitle){?>
 								</li>
 								<li><a href="/realBloomers/view/advice/all_advice.php">Advice</a>
 								</li>
-								<li><a href="realBloomers/contact.php">Contact</a></li>
-								<li><a href="shop.php">Shop</a>
-									<ul class="sub-menu">
-										<li><a href="realBloomers/view/shop.php">Shop</a></li>
-										<li><a href="realBloomers/view/checkout.php">Check Out</a></li>
-										<li><a href="realBloomers/view/cart.php">Cart</a></li>
-									</ul>
+								<li><a href="/realBloomers/contact.html">Contact</a></li>
+								<li><a href="/realBloomers/view/shop.php">Shop</a>
 								</li>
 								<li>
 									<div class="header-icons">
                                         <a class="shopping-cart" href="realBloomers/login/logout.php">LOGOUT</a> 
-										<a class="shopping-cart" href="realBloomers/cart.php"><i class="fas fa-shopping-cart"></i></a>
+										<a class="shopping-cart" href="/realBloomers/view/cart.php"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
