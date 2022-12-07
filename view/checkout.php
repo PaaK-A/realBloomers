@@ -105,16 +105,6 @@ $invoice_num=mt_rand(100000,999999);
 						        		<p><input type="text" placeholder="Name" id="customername" value="<?php echo $customer['customer_name'];?>"></p>
 						        		<p><input type="email" placeholder="Email" id="customeremail" value="<?php echo $customer['customer_email'];?>"></p>
 						        		
-										<p><label for="mobile_network">Choose you mobile servie provider:</label>
-
-										<select name="mobile_network" id="mobile_network">
-										<option value="Vodafone">Vodafone</option>
-										<option value="MTN">MTN</option>
-										<option value="AirtelTigo">AirtelTigo</option>
-										<option value="Glo">Glo</option>
-										</select></p>
-
-						        		<p><input type="tel" placeholder="Phone" id="mobilenumber" value="<?php echo $customer['customer_contact'];?>"></p>
 
 										<p><a href="" class="boxed-btn" onclick="payWithPaystack()">Place Order</a></p>
 
@@ -143,7 +133,7 @@ $invoice_num=mt_rand(100000,999999);
 						      </div>
 						    </div>
 						  </div>
-						  <div class="card single-accordion">
+						  <div class="card single-accordion" hidden>
 						    <div class="card-header" id="headingThree">
 						      <h5 class="mb-0">
 						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -207,7 +197,6 @@ $invoice_num=mt_rand(100000,999999);
 							</tbody>
 						</table>
 						
-						<!-- <paybox-button-widget  merchant-key="ce5d8437-87cf-48a5-b5b4-e32921d6d2bd" total="1.99" currency="GHS"  class="boxed-btn"> Basic PayBox Button </paybox-button-widget> -->
 
 					</div>
 				</div>
@@ -216,103 +205,10 @@ $invoice_num=mt_rand(100000,999999);
 	</div>
 	<!-- end check out section -->
 
-	<!-- logo carousel -->
-	<div class="logo-carousel-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="logo-carousel-inner">
-						<div class="single-logo-item">
-							<img src="../assets/img/company-logos/1.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="../assets/img/company-logos/2.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="../assets/img/company-logos/3.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="../assets/img/company-logos/4.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="../assets/img/company-logos/5.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end logo carousel -->
-
 	<!-- footer -->
-	<div class="footer-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box about-widget">
-						<h2 class="widget-title">About us</h2>
-						<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box get-in-touch">
-						<h2 class="widget-title">Get in Touch</h2>
-						<ul>
-							<li>34/8, East Hukupara, Gifirtok, Sadan.</li>
-							<li>support@fruitkha.com</li>
-							<li>+00 111 222 3333</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box pages">
-						<h2 class="widget-title">Pages</h2>
-						<ul>
-							<li><a href="index.php">Home</a></li>
-							<li><a href="about.php">About</a></li>
-							<li><a href="services.php">Shop</a></li>
-							<li><a href="news.php">News</a></li>
-							<li><a href="contact.php">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box subscribe">
-						<h2 class="widget-title">Subscribe</h2>
-						<p>Subscribe to our mailing list to get the latest updates.</p>
-						<form action="index.php">
-							<input type="email" placeholder="Email">
-							<button type="submit"><i class="fas fa-paper-plane"></i></button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php echo pagefooter();?>
 	<!-- end footer -->
 	
-	<!-- copyright -->
-	<div class="copyright">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-12">
-					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.</p>
-				</div>
-				<div class="col-lg-6 text-right col-md-12">
-					<div class="social-icons">
-						<ul>
-							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end copyright -->
 	
 	<!-- jquery -->
 	<script src="../assets/js/jquery-1.11.3.min.js"></script>
@@ -354,8 +250,8 @@ $invoice_num=mt_rand(100000,999999);
 <script>
 	
 	function payWithPaystack() {
-		var mobileNetwork=document.getElementById("mobile_network").value;
-		var mobileNum=document.getElementById("mobilenumber").value;
+		// var mobileNetwork=document.getElementById("mobile_network").value;
+		// var mobileNum=document.getElementById("mobilenumber").value;
 		var customername=document.getElementById("customername").value;
 		var customeremail=document.getElementById("customeremail").value;
 		var customerid= <?php echo $getcustomerID ?>
@@ -373,52 +269,33 @@ $invoice_num=mt_rand(100000,999999);
             alert('Window closed.');
             },
             callback: function(response){
-            let message = 'Payment complete! Reference: ' + response.reference;
-            alert(message);
-            // add_payment_detail_ctrl
-            email = customeremail;
-            amount = 1;
-            var dataString = 'email='+ email + '&amount='+ amount;
-            if (response.status=='success'){
-            //alert("Please Fill All Fields");
-          
-            $.ajax({
-            type: "POST",
-            url: "../actions/process_payment.php",
-            data: dataString,
-            cache: false,
-            success: function(result){
-            // alert(result);
-				$.ajax({
-				type: "POST",
-				url: "../actions/add_order.php",
-				data: {
-					cid: customerid,
-					invoice: $invoice_num,
-					amt: 1,
-				},
-				cache: false,
-				success: function(data,status){	
-					alert(data);
-				},
-				error: function (xhr, ajaxOptions, thrownError){
-					alert("Error:"+xhr.status);
-					alert(thrownError);
+				let message = 'Payment complete! Reference: ' + response.reference;
+				alert(message);
+				// add_payment_detail_ctrl
+				email = customeremail;
+				amount = 1;
+				var dataString = 'email='+ email + '&amount='+ amount + '&cid='+ customerid + '&invoice='+ invoice_num;
+
+				if (response.status=='success'){
+				//alert("Please Fill All Fields");
+			
+					$.ajax({
+						type: "POST",
+						url: "../actions/process_payment.php",
+						data: {dataString},
+						cache: false,
+						success: function(result){
+							alert(result);
+							
+						// window.location = "pay"
+						},
+						error: function (xhr, ajaxOptions, thrownError){
+							alert("Error:"+xhr.status);
+							alert(thrownError);
+						}
+					});
 				}
-				})
-            // window.location = "pay"
-            },
-			error: function (xhr, ajaxOptions, thrownError){
-				alert("Error:"+xhr.status);
-				alert(thrownError);
-			}
-            });
-          }
-          
-
             }
-            
-
         });
         handler.openIframe();
     }

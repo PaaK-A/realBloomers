@@ -1,12 +1,8 @@
 <?php
 
-include '../controller/room_controller.php';
+include '../controller/product_controller.php';
 
 session_start();
-
-$cid = $_SESSION['id'];
-$amt = $_GET['amt'];
-
 
 $email = $_POST['email'];
 $amount = $_POST['amount'];
@@ -38,9 +34,29 @@ curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
 $result = curl_exec($ch);
 
 
+//add payment and order
+
+$cid = $_POST['cid'];
+// $invoice_num=mt_rand(100000,999999);
+$date = date("Y-m-d");
+$status="Completed";
+$amt = $_POST['amount'];
+$invoice_num = $_POST['invoice'];
 
 
+$order=insertOrder_ctr($cid,$invoice_num,$date,$status);
 
+$selectorder=sel_order_ctr();
+$oid=$selectorder['order_id'];
 
-
-//new payment
+if ($order){
+  if(insertPayment_ctr($amt,$cid,$oid,$date)){
+    echo "Payment successful";
+  }
+  else{
+    echo "Something went wrong with payment. Please try again.";
+  }
+}
+else{
+  echo "Something went wrong with order. Please try again.";
+}
