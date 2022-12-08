@@ -40,12 +40,12 @@ function pageheader($minititle,$maintitle){?>
 									<div class="header-icons">
                                         <a class="shopping-cart" href="/login/logout.php">LOGOUT</a> 
 										<a class="shopping-cart" href="/view/cart.php"><i class="fas fa-shopping-cart"></i></a>
-										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+										<a class="mobile-hide search-bar-icon" href="#" hidden><i class="fas fa-search"></i></a>
 									</div>
 								</li>
 							</ul>
 						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<a class="mobile-show search-bar-icon" href="#" hidden><i class="fas fa-search" hidden></i></a>
 						<div class="mobile-menu"></div>
 						<!-- menu end -->
 					</div>
