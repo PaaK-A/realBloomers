@@ -9,7 +9,7 @@ function pageheader($minititle,$maintitle){?>
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.php">
-								<img src="/realBloomers/assets/img/logo.png" alt="">
+								<img src="/realBloomers/assets/img/Bloomersofficial.png" alt="" width="100" height="100">
 							</a>
 						</div>
 						<!-- logo -->
@@ -108,9 +108,9 @@ function pagefooter(){
 					<div class="footer-box get-in-touch">
 						<h2 class="widget-title">Get in Touch</h2>
 						<ul>
-							<li>34/8, East Hukupara, Gifirtok, Sadan.</li>
-							<li>support@fruitkha.com</li>
-							<li>+00 111 222 3333</li>
+							<li>34/8, East Cantoments, Accra, Ghana.</li>
+							<li>support@bloomers.com</li>
+							<li>+233 20 567 9876</li>
 						</ul>
 					</div>
 				</div>

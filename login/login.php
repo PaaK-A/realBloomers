@@ -16,7 +16,7 @@
       <div class="card login-card">
         <div class="row no-gutters">
           <div class="col-md-5">
-            <img src="../assets/img/background1.png" alt="login" class="login-card-img">
+            <img src="../assets/img/background2.png" alt="login" class="login-card-img">
           </div>
           <div class="col-md-7">
             <div class="card-body">
@@ -41,7 +41,7 @@
                   <input type="submit" name="loginsubmit" value="Login" class="btn btn-block login-btn mb-4">
                 </form>
 
-                <p class="login-card-footer-text">Don't have an account? <a href="ajaxregister.php" class="text-reset">Register here</a></p>
+                <p class="login-card-footer-text">Don't have an account? <a href="register.php" class="text-reset">Register here</a></p>
                 <nav class="login-card-footer-nav">
                 </nav>
             </div>
