@@ -18,7 +18,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
 
 else{
-    header("location: ../login/login.php");
+    header("location: ../../login/login.php");
 }
 ?>
 
