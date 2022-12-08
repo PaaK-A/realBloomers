@@ -127,7 +127,7 @@ $invoice_num=mt_rand(100000,999999);
 						    </div>
 						    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 						      <div class="card-body">
-						        <div class="shipping-address-form">
+						        <div class="billing-address-form">
 						        	<p><input type="text" placeholder="Address"></p>
 						        </div>
 						      </div>
