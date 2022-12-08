@@ -2,6 +2,7 @@
 include("../settings/core.php");
 include ("../controllers/product_contrroller.php");
 include ("../controllers/cart_controller.php");
+include_once("../settings/core.php");
 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 
@@ -135,8 +136,12 @@ $getcustomerID= $_SESSION['cid'];
 								<tr class="total-data">
 									<td><strong>Total:</strong></td>
 									
-									<td id="display_total">GHC <?php echo number_format(array_sum($tprices_array),2); ?></td>
-
+									<td id="display_total">GHC 
+										<?php echo number_format(array_sum($tprices_array),2); 
+										$_SESSION['total_price']= array_sum($tprices_array);
+										?>
+									</td>
+									
 								</tr>
 							</tbody>
 						</table>

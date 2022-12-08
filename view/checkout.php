@@ -25,6 +25,8 @@ else{
 }
 
 $getcustomerID= $_SESSION['cid'];
+$gettotalprice= $_SESSION['total_price'];
+echo $gettotalprice;
 // echo $getcustomerID;
 
 //use selectACustomer_ctr to select a customer using $getcustomerID
