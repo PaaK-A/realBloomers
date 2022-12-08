@@ -106,10 +106,10 @@ function pagefooter(){
 					<div class="footer-box pages">
 						<h2 class="widget-title">Pages</h2>
 						<ul>
-							<li><a href="/index.php">Home</a></li>
-							<li><a href="/about.html">About</a></li>
-							<li><a href="/view/shop.php">Shop</a></li>
-							<li><a href="/view/advice/all_advice.php">Advice</a></li>
+							<li><a href="../index.php">Home</a></li>
+							<li><a href="../about.html">About</a></li>
+							<li><a href="../view/shop.php">Shop</a></li>
+							<li><a href="../view/advice/all_advice.php">Advice</a></li>
 						</ul>
 					</div>
 				</div>
