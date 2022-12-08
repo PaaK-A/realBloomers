@@ -20,20 +20,8 @@ function pageheader($minititle,$maintitle){?>
 								<li><a href="../view/shop.php">Home</a>
 								</li>
 								<li><a href="../about.html">About</a></li>
-								<li hidden><a href="#">Pages</a>
-									<ul class="sub-menu">
-										<li><a href="404.php">404 page</a></li>
-										<li><a href="about.php">About</a></li>
-										<li><a href="cart.php">Cart</a></li>
-										<li><a href="checkout.php">Check Out</a></li>
-										<li><a href="contact.php">Contact</a></li>
-										<li><a href="news.php">News</a></li>
-										<li><a href="shop.php">Shop</a></li>
-									</ul>
-								</li>
 								<li><a href="../view/advice/all_advice.php">Advice</a>
 								</li>
-								<li><a href="../contact.html">Contact</a></li>
 								<li><a href="../view/shop.php">Shop</a>
 								</li>
 								<li>
@@ -122,7 +110,6 @@ function pagefooter(){
 							<li><a href="/about.html">About</a></li>
 							<li><a href="/view/shop.php">Shop</a></li>
 							<li><a href="/view/advice/all_advice.php">Advice</a></li>
-							<li><a href="/contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>

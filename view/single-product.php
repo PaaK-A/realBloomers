@@ -181,7 +181,6 @@ $category_name=$selectcat['cat_name'];
 							<li><a href="about.html">About</a></li>
 							<li><a href="services.html">Shop</a></li>
 							<li><a href="news.html">News</a></li>
-							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>

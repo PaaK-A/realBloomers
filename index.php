@@ -64,19 +64,7 @@
 								<li><a href="#">Home</a>
 								</li>
 								<li><a href="about.html">About</a></li>
-								<li hidden><a href="#">Pages</a>
-									<ul class="sub-menu">
-										<li><a href="404.html">404 page</a></li>
-										<li><a href="about.html">About</a></li>
-										<li><a href="cart.html">Cart</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="contact.html">Contact</a></li>
-										<li><a href="news.html">News</a></li>
-										<li><a href="shop.html">Shop</a></li>
-									</ul>
-								</li>
 								<li><a href="view/advice/all_advice.php">Advice</a></li>
-								<li><a href="contact.html">Contact</a></li>
 								<li><a href="view/shop.php">Shop</a>
 								</li>
 								<li>
@@ -128,7 +116,7 @@
 							<h1>Delicious Seasonal Fruits</h1>
 							<div class="hero-btns">
 								<a href="view/shop.php" class="boxed-btn">Products</a>
-								<a href="contact.html" class="bordered-btn">Contact Us</a>
+								<a href="view/advice/all_advice.php" class="bordered-btn">Plant Care</a>
 							</div>
 						</div>
 					</div>
@@ -392,7 +380,6 @@
 							<li><a href="/about.html">About</a></li>
 							<li><a href="/view/shop.html">Shop</a></li>
 							<li><a href="/view/advice/all_advice.php">Advice</a></li>
-							<li><a href="/contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>
