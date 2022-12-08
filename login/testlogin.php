@@ -1,12 +1,3 @@
-<?php
-//check if user is logged in already.
-//Session Start
-ob_start();
-session_start();
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,18 +24,24 @@ session_start();
                <h3>Welcome To Bloomers</h3>
               </div>
               <p class="login-card-description">Sign into your account</p>
-              <form action="login_process.php" method="POST">
+              <form action="loginprocess.php" method="POST">
                   <div class="form-group">
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+                    <!--make username textbox-->
+                    <label for="email" class="sr-only">Email:</label>
+                    <input type="email" name="customeremail" placeholder="Enter your email" id="customeremail" class="form-control">
                   </div>
+
                   <div class="form-group mb-4">
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password">
+                    <!--make password textbox--> 
+                    <label for="Password" class="sr-only">Password:</label>
+                    <input type="password" name="loginpassword" placeholder="Enter your password" id="psswd" class="form-control"> 
                   </div>
-                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="Login">
+
+                  <!--submit button-->
+                  <input type="submit" name="loginsubmit" value="Login" class="btn btn-block login-btn mb-4">
                 </form>
-                <p class="login-card-footer-text">Don't have an account? <a href="register.php" class="text-reset">Register here</a></p>
+
+                <p class="login-card-footer-text">Don't have an account? <a href="ajaxregister.php" class="text-reset">Register here</a></p>
                 <nav class="login-card-footer-nav">
                 </nav>
             </div>
