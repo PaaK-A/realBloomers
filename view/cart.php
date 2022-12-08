@@ -241,8 +241,8 @@ $getcustomerID= $_SESSION['cid'];
 				// $('#alert-box').html(data);
 				alert(data);
 				//alert(status);
-				var total= "<?php  echo "GHC ". number_format(array_sum($tprices_array),2); ?>";
-				$('#display_total').html(total);
+			
+				window.location.reload();
 				
 			},
 			error: function (xhr, ajaxOptions, thrownError) {
