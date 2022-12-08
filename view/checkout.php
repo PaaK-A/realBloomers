@@ -154,7 +154,7 @@ $invoice_num=mt_rand(100000,999999);
 					</div>
 				</div>
 
-				<div class="col-lg-4">
+				<div class="col-lg-4" hidden>
 					<div class="order-details-wrap">
 						<table class="order-details">
 							<thead>
