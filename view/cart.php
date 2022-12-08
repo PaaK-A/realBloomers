@@ -207,6 +207,7 @@ $getcustomerID= $_SESSION['cid'];
 				success: function(data,status) {
 					// alert('AJAX call was successful!');
 					// $('#alert-box').html(data);
+					window.location.reload();
 					alert(data);
 					//alert(status);
 				},
@@ -239,10 +240,9 @@ $getcustomerID= $_SESSION['cid'];
 			success: function(data,status) {
 				// alert('AJAX call was successful!');
 				// $('#alert-box').html(data);
+				window.location.reload();
 				alert(data);
 				//alert(status);
-			
-				window.location.reload();
 				
 			},
 			error: function (xhr, ajaxOptions, thrownError) {
