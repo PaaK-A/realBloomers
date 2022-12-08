@@ -17,9 +17,9 @@ function pageheader($minititle,$maintitle){?>
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li><a href="/view/shop.php">Home</a>
+								<li><a href="../view/shop.php">Home</a>
 								</li>
-								<li><a href="/about.html">About</a></li>
+								<li><a href="../about.html">About</a></li>
 								<li hidden><a href="#">Pages</a>
 									<ul class="sub-menu">
 										<li><a href="404.php">404 page</a></li>
@@ -31,14 +31,14 @@ function pageheader($minititle,$maintitle){?>
 										<li><a href="shop.php">Shop</a></li>
 									</ul>
 								</li>
-								<li><a href="/view/advice/all_advice.php">Advice</a>
+								<li><a href="../view/advice/all_advice.php">Advice</a>
 								</li>
-								<li><a href="/contact.html">Contact</a></li>
-								<li><a href="/view/shop.php">Shop</a>
+								<li><a href="../contact.html">Contact</a></li>
+								<li><a href="../view/shop.php">Shop</a>
 								</li>
 								<li>
 									<div class="header-icons">
-                                        <a class="shopping-cart" href="/login/logout.php">LOGOUT</a> 
+                                        <a class="shopping-cart" href="../login/logout.php">LOGOUT</a> 
 										<a class="shopping-cart" href="../view/cart.php"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#" hidden><i class="fas fa-search"></i></a>
 									</div>
