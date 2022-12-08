@@ -128,7 +128,7 @@ include("../functions/product_functions.php");
 
                                     <td>
                                         <a href="editproduct_form.php?id=<?php echo $row['product_id']; ?>" class="edit">Edit</a>
-                                        <a href="delete.php?pid=<?php echo $row['product_id']; ?>" class="delete">Delete</a>
+                                        <a href="../actions/delete.php?pid=<?php echo $row['product_id']; ?>" class="delete">Delete</a>
 
                                     </td>
                     
