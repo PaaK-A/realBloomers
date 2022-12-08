@@ -158,7 +158,7 @@ function pagefooter(){
 							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
 						</ul>
 					</div> -->
-				</div>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>

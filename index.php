@@ -61,7 +61,7 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="#">Home</a>
+								<li><a href="#">Home</a>
 								</li>
 								<li><a href="about.html">About</a></li>
 								<li hidden><a href="#">Pages</a>
@@ -388,22 +388,22 @@
 					<div class="footer-box pages">
 						<h2 class="widget-title">Pages</h2>
 						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="view/shop.php">Shop</a></li>
-							<li><a href="view/advice/all_advice.php">News</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="/index.php">Home</a></li>
+							<li><a href="/about.html">About</a></li>
+							<li><a href="/view/shop.html">Shop</a></li>
+							<li><a href="/view/advice/all_advice.php">Advice</a></li>
+							<li><a href="/contact.html">Contact</a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6" >
+				<div class="col-lg-3 col-md-6">
 					<div class="footer-box subscribe">
-						<h2 class="widget-title">Subscribe</h2>
-						<p>Subscribe to our mailing list to get the latest updates.</p>
-						<form action="index.html">
+						<h2 class="widget-title">Be You</h2>
+						<p>Feel free to express yourself the only way you can.</p>
+						<!-- <form action="index.html">
 							<input type="email" placeholder="Email">
 							<button type="submit"><i class="fas fa-paper-plane"></i></button>
-						</form>
+						</form> -->
 					</div>
 				</div>
 			</div>
@@ -418,8 +418,8 @@
 				<div class="col-lg-6 col-md-12">
 					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.</p>
 				</div>
-				<div class="col-lg-6 text-right col-md-12">
-					<div class="social-icons" hidden>
+				<!-- <div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
 						<ul>
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -428,7 +428,7 @@
 							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
 						</ul>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

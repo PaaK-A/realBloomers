@@ -6,45 +6,60 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+        background-image: "../assets/img/background2.png";
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/login2.css">
 </head>
 
 <body>
-    <form action= "registerprocess.php" method="POST">
-        <!--make username textbox-->
-        <h4>Name</h4>
-        <input type="text" name="u_name" placeholder="Enter your name" id="fullname" required>
-
-        <!--make email text box--> 
-        <h4>Email</h4>
-        <input type="email" name="cusemail" placeholder="Enter your email" id="customeremail" required> 
-
-        <!-- create Password form. -->
-        <h4>Password</h4>
-        <input type="password" name="cuspassword" placeholder="Enter your password" id="psswd" required> 
-
-        <!--make country text box--> 
-        <h4>country</h4>
-        <input type="text" name="cuscountry" placeholder="Enter your country" id="customercountry" required>  
-
-        <!--make city text box--> 
-        <h4>city</h4>
-        <input type="text" name="cuscity" placeholder="Enter your city" id="customercity" required>  
-
-       <!--make telephone number text box--> 
-       <h4>telephone</h4>
-        <input type="text" name="tele" placeholder="Enter your phone number" id="telnumber" required> 
-
-
-        <br>
-        <br>
-        <!--submit button-->
-        <input type="submit" name="registerinfo" value="Register">
-    </form>
-    
-    <br>
-
    
-    <!--back to index button-->
-    <button type="button" onclick="location.href='../index.php'">Return to Index</button>
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <!-- <div class="col-md-5">
+            <img src="../assets/img/background1.png" alt="login" class="login-card-img">
+          </div> -->
+          <div class="col-md-7">
+            <div class="card-body">
+              <div class="brand-wrapper">
+               <h3>Welcome To Bloomers</h3>
+              </div>
+              <p class="login-card-description">Sign into your account</p>
+              <form action="loginprocess.php" method="POST">
+                  <div class="form-group">
+                    <!--make username textbox-->
+                    <label for="email" class="sr-only">Email:</label>
+                    <input type="email" name="customeremail" placeholder="Enter your email" id="customeremail" class="form-control">
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <!--make password textbox--> 
+                    <label for="Password" class="sr-only">Password:</label>
+                    <input type="password" name="loginpassword" placeholder="Enter your password" id="psswd" class="form-control"> 
+                  </div>
+
+                  <!--submit button-->
+                  <input type="submit" name="loginsubmit" value="Login" class="btn btn-block login-btn mb-4">
+                </form>
+
+                <p class="login-card-footer-text">Don't have an account? <a href="ajaxregister.php" class="text-reset">Register here</a></p>
+                <nav class="login-card-footer-nav">
+                </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     
 </body>
