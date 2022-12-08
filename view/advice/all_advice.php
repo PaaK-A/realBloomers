@@ -175,6 +175,8 @@ else{
 				</div>
 				
 			</div>
+		</div>
+	</div>
 	<!-- end advice -->
 
 	<!-- footer -->
