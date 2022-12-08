@@ -1,7 +1,7 @@
 <?php 
 include("../../navbars/header.php");
 include("../../product_contrroller.php");
-include("../settings/core.php");
+include("../../settings/core.php");
 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 
