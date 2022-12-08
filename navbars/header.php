@@ -9,7 +9,7 @@ function pageheader($minititle,$maintitle){?>
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.php">
-								<img src="/realBloomers/assets/img/Bloomersofficial.png" alt="" width="100" height="100">
+								<img src="../assets/img/Bloomersofficial.png" alt="" width="100" height="100">
 							</a>
 						</div>
 						<!-- logo -->
