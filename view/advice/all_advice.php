@@ -1,6 +1,25 @@
 <?php 
 include("../../navbars/header.php");
 include("../../product_contrroller.php");
+include("../settings/core.php");
+
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+
+    if($_SESSION["role"] == 1){ 
+        //echo "Hello admin";
+        $role= "ADMIN";
+    }
+
+    else{ 
+        //echo "You are not ADMIN.";
+        $role= "User";
+        //echo '<a href="l../login/login.php"">Login</a>';
+    }
+}
+
+else{
+    header("location: ../login/login.php");
+}
 ?>
 
 <!DOCTYPE html>
