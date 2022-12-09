@@ -99,10 +99,6 @@ $keywordsarray = explode(" ", $keywords);
 							<h2><?php echo $advice['productcare_title']; ?></h2>
 							<p><?php echo $advice['productcare_info']; ?></p>
 						</div>
-
-						
-
-						
 					</div>
 				</div>
 				<div class="col-lg-4">
