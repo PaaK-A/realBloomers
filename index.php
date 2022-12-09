@@ -78,7 +78,8 @@ else{
 								</li>
 								<li>
 									<div class="header-icons">
-                                        <a class="shopping-cart" href="login/login.php">LOGIN</a> 
+                                        <a class="shopping-cart" href="login/login.php">LOGIN</a>
+										<a class="shopping-cart" href="login/register.php">REGISTER</a>  
 										<a class="shopping-cart" href="view/cart.php"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#" hidden><i class="fas fa-search"></i></a>
 									</div>
