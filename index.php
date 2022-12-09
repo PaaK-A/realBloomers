@@ -140,8 +140,8 @@ include_once("controllers/product_contrroller.php");
 				<div class="col-lg-9 offset-lg-2 text-center">
 					<div class="hero-text">
 						<div class="hero-text-tablecell">
-							<p class="subtitle">Fresh & Organic</p>
-							<h1>Delicious Seasonal Fruits</h1>
+							<p class="subtitle">Organic & Inorganic</p>
+							<h1>Plants for You</h1>
 							<div class="hero-btns">
 								<a href="view/index.php" class="boxed-btn">Products</a>
 								<a href="view/all_advice.php" class="bordered-btn">Plant Care</a>
