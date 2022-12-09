@@ -75,7 +75,7 @@ else{
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.php">
-								<img src="../../assets/img/Bloomersofficial.png" alt="" width="100" height="100">
+								<img src="../../assets/img/Bloomersofficial.png" alt="" width="70" height="50">
 							</a>
 						</div>
 						<!-- logo -->
