@@ -64,7 +64,7 @@
 								<li><a href="view/index.php">Home</a>
 								</li>
 								<li><a href="about.php">About</a></li>
-								<li><a href="view/advice/all_advice.php">Advice</a>
+								<li><a href="view/all_advice.php">Advice</a>
 								</li>
 								<li><a href="view/index.php">Shop</a>
 								</li>
@@ -142,7 +142,7 @@
 							<h1>Delicious Seasonal Fruits</h1>
 							<div class="hero-btns">
 								<a href="view/index.php" class="boxed-btn">Products</a>
-								<a href="view/advice/all_advice.php" class="bordered-btn">Plant Care</a>
+								<a href="view/all_advice.php" class="bordered-btn">Plant Care</a>
 							</div>
 						</div>
 					</div>
@@ -340,7 +340,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<a href="view/advice/all_advice.php" class="boxed-btn">More Advice</a>
+					<a href="view/all_advice.php" class="boxed-btn">More Advice</a>
 				</div>
 			</div>
 		</div>
@@ -402,7 +402,7 @@
 							<li><a href="/index.php">Home</a></li>
 							<li><a href="/about.php">About</a></li>
 							<li><a href="/view/shop.html">Shop</a></li>
-							<li><a href="/view/advice/all_advice.php">Advice</a></li>
+							<li><a href="/view/all_advice.php">Advice</a></li>
 						</ul>
 					</div>
 				</div>

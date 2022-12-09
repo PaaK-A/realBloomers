@@ -179,6 +179,14 @@ function selectOneAdvice_ctr($adviceID){
     
 }
 
+//--SELECT Products limit/
+function selectLatestAdvice_ctr(){
+    $selectsql= new product_class();
+
+    return $selectsql->selectLatestAdvice_cls();
+    
+}
+
 
 //--SELECT BY PLANT CARE INFO--//
 function selectACareInfo_ctr($careInfo){

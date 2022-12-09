@@ -64,7 +64,7 @@
 								<!-- <li><a href="index.php">Home</a>
 								</li> -->
 								<li><a href="about.php">About</a></li>
-								<li><a href="view/advice/all_advice.php">Advice</a></li>
+								<li><a href="view/all_advice.php">Advice</a></li>
 								<li><a href="view/index.php">Shop</a>
 								</li>
 								<li>
@@ -340,7 +340,7 @@
 						<ul>
 							<li><a href="about.php">About</a></li>
 							<li><a href="view/shop.html">Shop</a></li>
-							<li><a href="view/advice/all_advice.php">Advice</a></li>
+							<li><a href="view/all_advice.php">Advice</a></li>
 						</ul>
 					</div>
 				</div>

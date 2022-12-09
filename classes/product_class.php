@@ -267,6 +267,19 @@ class product_class extends db_connection{
 		//print $searchsql;
 		return $this -> db_fetch_all($searchsql);
 	}
+
+	/*** 
+	 SELECT advice latest
+	 limit to 3
+	 **/
+	public function selectLatestAdvice_cls(){
+		//write query
+		
+		$selsql = "SELECT * FROM advice ORDER BY date DESC LIMIT 3";
+
+		//execute 	
+		return $this -> db_fetch_all($selsql);
+	}
 	
 	/**payment */
 
