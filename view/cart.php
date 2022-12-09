@@ -59,6 +59,37 @@ $getcustomerID= $_SESSION['cid'];
 	<!-- responsive -->
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 
+	<!-- alert styling -->
+	<style>
+		.alert {
+		padding: 20px;
+		background-color: #f44336;
+		color: white;
+		opacity: 1;
+		transition: opacity 0.6s;
+		margin-bottom: 15px;
+		}
+
+		.alert.success {background-color: #04AA6D;}
+		.alert.info {background-color: #2196F3;}
+		.alert.warning {background-color: #ff9800;}
+
+		.closebtn {
+		margin-left: 15px;
+		color: white;
+		font-weight: bold;
+		float: right;
+		font-size: 22px;
+		line-height: 20px;
+		cursor: pointer;
+		transition: 0.3s;
+		}
+
+		.closebtn:hover {
+		color: black;
+		}
+	</style>
+
 </head>
 <body>
 	
@@ -120,6 +151,11 @@ $getcustomerID= $_SESSION['cid'];
 								<?php endforeach;?>
 							</tbody>
 						</table>
+						<!-- alert box -->
+						<div class="alert success" id="alerter" hidden>
+						<span class="closebtn" onclick="closebtn()">&times;</span> 
+						<span id="alert"></span>
+						</div>
 					</div>
 				</div>
 
@@ -197,7 +233,7 @@ $getcustomerID= $_SESSION['cid'];
 </html>
 
 <script type="text/javascript">
-
+	let alerter=document.getElementById("alerter");
 	function removeProduct_fxn(productid){
 		event.preventDefault();
 
@@ -213,8 +249,9 @@ $getcustomerID= $_SESSION['cid'];
 					// alert('AJAX call was successful!');
 					// $('#alert-box').html(data);
 					window.location.reload();
-					alert(data);
-					//alert(status);
+					// alert(data);
+					alerter.removeAttribute("hidden");
+            		$("#alert").html(data);
 				},
 				error: function (xhr, ajaxOptions, thrownError) {
 					alert("Error:"+xhr.status);
@@ -255,6 +292,11 @@ $getcustomerID= $_SESSION['cid'];
 				alert(thrownError);
 			}
 		});
+	}
+
+	function closebtn(){
+		alerter.setAttribute("hidden", "true");
+		quickaddalerter.setAttribute("hidden", "true");
 	}
 
 </script>
