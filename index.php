@@ -1,6 +1,6 @@
 <?php 
 include_once("controllers/product_contrroller.php");
-include_once("../settings/core.php");
+include_once("settings/core.php");
 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 	header("location: view/index.php");
