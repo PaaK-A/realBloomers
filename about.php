@@ -53,7 +53,7 @@
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.html">
-								<img src="assets/img/Bloomersofficial.png" alt="" width="70" heigth="50">
+								<img src="assets/img/Bloomersofficial.png" alt="" width="70" height="50">
 							</a>
 						</div>
 						<!-- logo -->
@@ -70,7 +70,26 @@
 								<li>
 									<div class="header-icons">
 
+
+										<?php 
+										 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true):?>
+											<a class="shopping-cart" href="login/logout.php">LOGOUT</a> 
+										<?php endif;?>
+										<?php
+										if(!isset($_SESSION["loggedin"])):?>
+											<a class="shopping-cart" href="login/login.php">LOGIN</a> 
+										<?php endif;?>
+								
+										<?php 
+										 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true):?>
+										<a class="shopping-cart" href="view/cart.php"><i class="fas fa-shopping-cart"></i></a>
+										<?php endif;?>
+
+										<?php 
+										 if(!isset($_SESSION["loggedin"])):?>
 										<a class="shopping-cart" href="login/login.php"><i class="fas fa-shopping-cart"></i></a>
+										<?php endif;?>
+
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
