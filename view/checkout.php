@@ -69,6 +69,37 @@ $invoice_num=mt_rand(100000,999999);
 	<!-- responsive -->
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 
+		<!-- alert styling -->
+		<style>
+		.alert {
+		padding: 20px;
+		background-color: #f44336;
+		color: white;
+		opacity: 1;
+		transition: opacity 0.6s;
+		margin-bottom: 15px;
+		}
+
+		.alert.success {background-color: #04AA6D;}
+		.alert.info {background-color: #2196F3;}
+		.alert.warning {background-color: #ff9800;}
+
+		.closebtn {
+		margin-left: 15px;
+		color: white;
+		font-weight: bold;
+		float: right;
+		font-size: 22px;
+		line-height: 20px;
+		cursor: pointer;
+		transition: 0.3s;
+		}
+
+		.closebtn:hover {
+		color: black;
+		}
+	</style>
+
 </head>
 <body>
 	
@@ -106,8 +137,7 @@ $invoice_num=mt_rand(100000,999999);
 						        	<form action="">
 						        		<p><input type="text" placeholder="Name" id="customername" value="<?php echo $customer['customer_name'];?>"></p>
 						        		<p><input type="email" placeholder="Email" id="customeremail" value="<?php echo $customer['customer_email'];?>"></p>
-						        		
-
+										<p><input type="text" placeholder="Delivery Adress" id="customeraddress"></p>	
 										<p><a href="" class="boxed-btn" onclick="payWithPaystack()">Place Order</a></p>
 
 										<!-- <p><paybox-button-widget merchant-key="f3295741-3bd8-4149-8bed-bd5f6c0bc184" total="1.0" order-id ="PB_1234" currency="GHS" type="danger rounded" payload='{\"key\":\"data\"}'  shipping="enabled"> Customised PayBox Button </paybox-button-widget></p> -->
@@ -119,38 +149,11 @@ $invoice_num=mt_rand(100000,999999);
 						  </div>
 						  <!-- end billing address -->
 
-						  <div class="card single-accordion">
-						    <div class="card-header" id="headingTwo">
-						      <h5 class="mb-0">
-						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						          Delivery Address
-						        </button>
-						      </h5>
-						    </div>
-						    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-						      <div class="card-body">
-						        <div class="billing-address-form">
-						        	<p><input type="text" placeholder="Address"></p>
-						        </div>
-						      </div>
-						    </div>
-						  </div>
-						  <div class="card single-accordion" hidden>
-						    <div class="card-header" id="headingThree">
-						      <h5 class="mb-0">
-						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-						          Card Details
-						        </button>
-						      </h5>
-						    </div>
-						    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-						      <div class="card-body">
-						        <div class="card-details">
-						        	<p>Your card details goes here.</p>
-						        </div>
-						      </div>
-						    </div>
-						  </div>
+						  <!-- alert box -->
+							<div class="alert success" id="alerter" hidden>
+								<span class="closebtn" onclick="closebtn()">&times;</span> 
+								<span id="alert"></span>
+							</div>
 						</div>
 
 					</div>
@@ -254,6 +257,7 @@ $invoice_num=mt_rand(100000,999999);
 	function payWithPaystack() {
 		// var mobileNetwork=document.getElementById("mobile_network").value;
 		// var mobileNum=document.getElementById("mobilenumber").value;
+		let alerter=document.getElementById("alerter");
 		var customername=document.getElementById("customername").value;
 		var customeremail=document.getElementById("customeremail").value;
 		var customerid= <?php echo $getcustomerID ?>
@@ -272,7 +276,10 @@ $invoice_num=mt_rand(100000,999999);
             },
             callback: function(response){
 				let message = 'Payment complete! Reference: ' + response.reference;
-				alert(message);
+				// alert(message);
+
+				alerter.removeAttribute("hidden");
+            	$("#alert").html(message);
 				// add_payment_detail_ctrl
 				email = customeremail;
 				amount = 1;
@@ -301,4 +308,9 @@ $invoice_num=mt_rand(100000,999999);
         });
         handler.openIframe();
     }
+
+	function closebtn(){
+		alerter.setAttribute("hidden", "true");
+		quickaddalerter.setAttribute("hidden", "true");
+	}
 </script>
