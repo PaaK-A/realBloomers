@@ -85,7 +85,7 @@ else{
 							<ul>
 								<li><a href="../../view/shop.php">Home</a>
 								</li>
-								<li><a href="../../about.html">About</a></li>
+								<li><a href="../../about.php">About</a></li>
 								<li hidden><a href="#">Pages</a>
 									<ul class="sub-menu">
 										<li><a href="404.php">404 page</a></li>
@@ -204,7 +204,7 @@ else{
 						<h2 class="widget-title">Pages</h2>
 						<ul>
 							<li><a href="../../index.php">Home</a></li>
-							<li><a href="../../about.html">About</a></li>
+							<li><a href="../../about.php">About</a></li>
 							<li><a href="../../view/shop.php">Shop</a></li>
 							<li><a href="../../view/advice/all_advice.php">Advice</a></li>
 						</ul>

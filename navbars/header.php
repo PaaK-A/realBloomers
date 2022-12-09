@@ -9,7 +9,7 @@ function pageheader($minititle,$maintitle){?>
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.php">
-								<img src="../assets/img/Bloomersofficial.png" alt="" width="100" height="100">
+								<img src="../assets/img/Bloomersofficial.png" alt="" width="70" height="50">
 							</a>
 						</div>
 						<!-- logo -->
@@ -19,7 +19,7 @@ function pageheader($minititle,$maintitle){?>
 							<ul>
 								<li><a href="../view/shop.php">Home</a>
 								</li>
-								<li><a href="../about.html">About</a></li>
+								<li><a href="../about.php">About</a></li>
 								<li><a href="../view/advice/all_advice.php">Advice</a>
 								</li>
 								<li><a href="../view/shop.php">Shop</a>
@@ -107,7 +107,7 @@ function pagefooter(){
 						<h2 class="widget-title">Pages</h2>
 						<ul>
 							<li><a href="../index.php">Home</a></li>
-							<li><a href="../about.html">About</a></li>
+							<li><a href="../about.php">About</a></li>
 							<li><a href="../view/shop.php">Shop</a></li>
 							<li><a href="../view/advice/all_advice.php">Advice</a></li>
 						</ul>

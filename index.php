@@ -63,7 +63,7 @@
 							<ul>
 								<li><a href="#">Home</a>
 								</li>
-								<li><a href="about.html">About</a></li>
+								<li><a href="about.php">About</a></li>
 								<li><a href="view/advice/all_advice.php">Advice</a></li>
 								<li><a href="view/shop.php">Shop</a>
 								</li>
@@ -240,7 +240,7 @@
 						<h2>We are <span class="orange-text">Fruitkha</span></h2>
 						<p>Etiam vulputate ut augue vel sodales. In sollicitudin neque et massa porttitor vestibulum ac vel nisi. Vestibulum placerat eget dolor sit amet posuere. In ut dolor aliquet, aliquet sapien sed, interdum velit. Nam eu molestie lorem.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis illo repellat veritatis minus, et labore minima mollitia qui ducimus.</p>
-						<a href="about.html" class="boxed-btn mt-4">Know more</a>
+						<a href="about.php" class="boxed-btn mt-4">Know more</a>
 					</div>
 				</div>
 			</div>
@@ -377,7 +377,7 @@
 						<h2 class="widget-title">Pages</h2>
 						<ul>
 							<li><a href="/index.php">Home</a></li>
-							<li><a href="/about.html">About</a></li>
+							<li><a href="/about.php">About</a></li>
 							<li><a href="/view/shop.html">Shop</a></li>
 							<li><a href="/view/advice/all_advice.php">Advice</a></li>
 						</ul>

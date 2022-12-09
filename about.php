@@ -1,3 +1,5 @@
+<?php include_once("settings/core.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,15 +61,25 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li><a href="index.php">Home</a>
-								</li>
-								<li><a href="about.html">About</a></li>
+								<!-- <li><a href="index.php">Home</a>
+								</li> -->
+								<li><a href="about.php">About</a></li>
 								<li><a href="view/advice/all_advice.php">Advice</a></li>
 								<li><a href="view/shop.php">Shop</a>
 								</li>
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="../login/login.php">LOGIN</a> 
+
+
+										<?php 
+										 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true):?>
+											<a class="shopping-cart" href="login/logout.php">LOGOUT</a> 
+										<?php endif;?>
+										<?php
+										if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] !== true):?>
+											<a class="shopping-cart" href="login/login.php">LOGIN</a> 
+										<?php endif;?>
+									
 										<a class="shopping-cart" href="login/login.php"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
@@ -317,10 +329,9 @@
 					<div class="footer-box pages">
 						<h2 class="widget-title">Pages</h2>
 						<ul>
-							<li><a href="/index.php">Home</a></li>
-							<li><a href="/about.html">About</a></li>
-							<li><a href="/view/shop.html">Shop</a></li>
-							<li><a href="/view/advice/all_advice.php">Advice</a></li>
+							<li><a href="about.php">About</a></li>
+							<li><a href="view/shop.html">Shop</a></li>
+							<li><a href="view/advice/all_advice.php">Advice</a></li>
 						</ul>
 					</div>
 				</div>
