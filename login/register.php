@@ -12,6 +12,35 @@
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/login.css">
+  <style>
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
 </head>
 <body>
   <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
@@ -57,6 +86,13 @@
                 <label for="tele">Contact No.</label>
                 <input type="number" name="tele" id="telnumber" class="form-control" placeholder="XXX-XXXX-XXXX">
                 </div>
+
+                <!-- alert box -->
+                <div class="alert" id="alerter" hidden>
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  <span id="alert"></span>
+                </div>
+
                 <input name="registerinfo" id="signup_btn" class="btn btn-block login-btn mb-4" type="submit" value="Signup" onclick="testajax()">
                 
                 <p class="login-card-footer-text">You have an account? <a href="login.php" class="text-reset">Sign In here</a></p>
@@ -74,17 +110,22 @@
       
     function testajax() {
       //alert("yes")
+      let alerter=document.getElementById("alerter");
       let password1= $("#passwd").val();
       let password2= $("#re_passwd").val();
       let checkphonenum= $("#telnumber").val();
       var phoneno = /^\d{10}$/;
 
       if(password1 != password2){
-        alert("Password is incorrect");
+        // alert("Password is incorrect");
+        alerter.removeAttribute("hidden");
+        $("#alert").html("Password is incorrect");
       }
 
       else if(!checkphonenum.match(phoneno)){
-        alert("Phone number format is wrong.");
+        // alert("Phone number format is wrong.");
+        alerter.removeAttribute("hidden");
+        $("#alert").html("Phone number format is wrong.");
       }
 
       else{
@@ -101,8 +142,9 @@
           } ,
           success: function(data,status) {
               // alert('AJAX call was successful!');
-              //$('#content').html(data);
-              alert(data);
+              alerter.removeAttribute("hidden");
+              $("#alert").html(data);
+              // alert(data);
               window.location.replace('login.php');
           },
           error: function (xhr, ajaxOptions, thrownError) {
