@@ -46,6 +46,37 @@ $category_name=$selectcat['cat_name'];
 	<!-- responsive -->
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 
+	<!-- alert styling -->
+	<style>
+		.alert {
+		padding: 20px;
+		background-color: #f44336;
+		color: white;
+		opacity: 1;
+		transition: opacity 0.6s;
+		margin-bottom: 15px;
+		}
+
+		.alert.success {background-color: #04AA6D;}
+		.alert.info {background-color: #2196F3;}
+		.alert.warning {background-color: #ff9800;}
+
+		.closebtn {
+		margin-left: 15px;
+		color: white;
+		font-weight: bold;
+		float: right;
+		font-size: 22px;
+		line-height: 20px;
+		cursor: pointer;
+		transition: 0.3s;
+		}
+
+		.closebtn:hover {
+		color: black;
+		}
+	</style>
+
 </head>
 <body>
 	
@@ -82,13 +113,11 @@ $category_name=$selectcat['cat_name'];
 							<a href="cart.php" class="cart-btn" onclick="quantittee()"></i> Add to Cart</a>
 							<p><strong>Categories: </strong><?php echo $category_name; ?></p>
 						</div>
-						<!-- <h4>Share:</h4>
-						<ul class="product-share">
-							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href=""><i class="fab fa-twitter"></i></a></li>
-							<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-							<li><a href=""><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
+						<!-- alert box -->
+						<div class="alert success" id="alerter" hidden>
+						<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+						<span id="alert"></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -204,6 +233,7 @@ $category_name=$selectcat['cat_name'];
 
 function quantittee(){
   event.preventDefault();
+  let alerter=document.getElementById("alerter");
   var qttt=document.getElementById('inputQuantity').value;
   var productid=<?php echo $selectoneP['product_id'] ?>;
 //   alert(qttt);
@@ -220,7 +250,9 @@ function quantittee(){
 		success: function(data,status) {
 			// alert('AJAX call was successful!');
 			//$('#content').html(data);
-			alert(data);
+			// alert(data);
+			alerter.removeAttribute("hidden");
+            $("#alert").html(data);
 			//alert(status);
 		},
 		error: function (xhr, ajaxOptions, thrownError) {
