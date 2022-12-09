@@ -52,8 +52,8 @@
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
-							<a href="index.html">
-								<img src="assets/img/logo.png" alt="">
+							<a href="index.php">
+							<img src="assets/img/Bloomersofficial.png" alt="" width="70" height="50">
 							</a>
 						</div>
 						<!-- logo -->
@@ -61,24 +61,50 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li><a href="#">Home</a>
+								<li><a href="view/shop.php">Home</a>
 								</li>
 								<li><a href="about.php">About</a></li>
-								<li><a href="view/advice/all_advice.php">Advice</a></li>
+								<li><a href="view/advice/all_advice.php">Advice</a>
+								</li>
 								<li><a href="view/shop.php">Shop</a>
 								</li>
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="../login/login.php">LOGIN</a> 
-										<a class="shopping-cart" href="login/login.php"><i class="fas fa-shopping-cart"></i></a>
-										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                                        <a class="shopping-cart" href="login/login.php">LOGIN</a> 
+										<a class="shopping-cart" href="view/cart.php"><i class="fas fa-shopping-cart"></i></a>
+										<a class="mobile-hide search-bar-icon" href="#" hidden><i class="fas fa-search"></i></a>
 									</div>
 								</li>
 							</ul>
 						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<a class="mobile-show search-bar-icon" href="#" hidden><i class="fas fa-search" hidden></i></a>
 						<div class="mobile-menu"></div>
 						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search arewa -->
 					</div>
 				</div>
 			</div>
@@ -183,7 +209,7 @@
 							<div class="client-meta">
 								<h3>Saira Hakim <span>Local shop owner</span></h3>
 								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+									" I am so impressed with the quality of the plants I received from this site! They arrived in perfect condition, and they are thriving in my garden. I will definitely be a repeat customer.  "
 								</p>
 								<div class="last-icon">
 									<i class="fas fa-quote-right"></i>
@@ -197,7 +223,7 @@
 							<div class="client-meta">
 								<h3>David Niph <span>Local shop owner</span></h3>
 								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+									" I had a great experience shopping on this site. The selection of plants was impressive, and the customer service was top-notch. I was able to find exactly what I was looking for, and I received my order quickly and securely. "
 								</p>
 								<div class="last-icon">
 									<i class="fas fa-quote-right"></i>
@@ -209,9 +235,9 @@
 								<img src="assets/img/avaters/avatar3.png" alt="">
 							</div>
 							<div class="client-meta">
-								<h3>Jacob Sikim <span>Local shop owner</span></h3>
+								<h3>Jacob Sikim <span>Libranian</span></h3>
 								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+									"I was hesitant to order plants online, but I am so glad I did! The plants I received were healthy and beautiful, and they arrived on time and in great condition. I am very happy with my purchase, and I will definitely shop here again. "
 								</p>
 								<div class="last-icon">
 									<i class="fas fa-quote-right"></i>
@@ -229,17 +255,24 @@
 	<div class="abt-section mb-150">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-12">
+				<!-- <div class="col-lg-6 col-md-12">
 					<div class="abt-bg">
 						<a href="https://www.youtube.com/watch?v=DBLlFWYcIGQ" class="video-play-btn popup-youtube"><i class="fas fa-play"></i></a>
 					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
+				</div> -->
+				<div class="col-lg-12 col-md-24">
 					<div class="abt-text">
-						<p class="top-sub">Since Year 1999</p>
-						<h2>We are <span class="orange-text">Fruitkha</span></h2>
-						<p>Etiam vulputate ut augue vel sodales. In sollicitudin neque et massa porttitor vestibulum ac vel nisi. Vestibulum placerat eget dolor sit amet posuere. In ut dolor aliquet, aliquet sapien sed, interdum velit. Nam eu molestie lorem.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis illo repellat veritatis minus, et labore minima mollitia qui ducimus.</p>
+						<p class="top-sub">Since Year 2014</p>
+						<h2>We are <span class="orange-text">Bloomers</span></h2>
+						<p>Sure, here is an example of a brief introduction to an e-commerce site that sells plants, called Bloomers:</p>
+
+						<p>Bloomers is an online plant shop established in 2014. Our goal is to make it easy and affordable for everyone to bring a touch of nature into their homes. We offer a wide variety of plants, from succulents and cacti to tropical houseplants and herbs. We also offer quick delivery to most locations, so you can start enjoying your new plants as soon as possible.</p>
+
+						<p>At Bloomers, we pride ourselves on offering high-quality plants at affordable prices. We carefully select each plant we sell, ensuring that it is healthy and well-suited to the conditions in your home. We also offer a 100% satisfaction guarantee, so if you are not completely happy with your purchase, you can return it for a full refund.</p>
+
+						<p>In addition to our wide selection of plants, we also offer a range of accessories and supplies to help you create the perfect home for your plants. From pots and planters to fertilizers and soil amendments, we have everything you need to give your plants the care and attention they deserve. We also offer a subscription service, where you can receive a new plant delivered to your door every month. Try it out and discover the joy of adding new plants to your collection on a regular basis.</p>
+
+						<p>At Bloomers, we believe that plants have the power to transform any space into a more vibrant and inviting place. Whether you're looking for a small potted plant to add some color to your desk, or a larger plant to make a statement in your living room, we have something for everyone. We also offer care guides and tips to help you keep your plants healthy and happy. Shop now and start blooming with Bloomers.</p>
 						<a href="about.php" class="boxed-btn mt-4">Know more</a>
 					</div>
 				</div>
@@ -247,19 +280,9 @@
 		</div>
 	</div>
 	<!-- end advertisement section -->
-	
-	<!-- shop banner -->
-	<section class="shop-banner">
-    	<div class="container">
-        	<h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
-            <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div>
-            <a href="shop.html" class="cart-btn btn-lg">Shop Now</a>
-        </div>
-    </section>
-	<!-- end shop banner -->
 
 	<!-- latest news -->
-	<div class="latest-news pt-150 pb-150">
+	<div class="latest-news pt-60 pb-150">
 		<div class="container">
 
 			<div class="row">
@@ -366,8 +389,8 @@
 					<div class="footer-box get-in-touch">
 						<h2 class="widget-title">Get in Touch</h2>
 						<ul>
-							<li>34/8, East Hukupara, Gifirtok, Sadan.</li>
-							<li>support@fruitkha.com</li>
+							<li>34/8, East Cantoments, Accra, Ghana.</li>
+							<li>support@bloomers.com</li>
 							<li>+00 111 222 3333</li>
 						</ul>
 					</div>
