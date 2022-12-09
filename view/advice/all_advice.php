@@ -83,7 +83,7 @@ else{
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li><a href="../../view/shop.php">Home</a>
+								<li><a href="../../view/index.php">Home</a>
 								</li>
 								<li><a href="../../about.php">About</a></li>
 								<li hidden><a href="#">Pages</a>
@@ -93,12 +93,12 @@ else{
 										<li><a href="cart.php">Cart</a></li>
 										<li><a href="checkout.php">Check Out</a></li>
 										<li><a href="news.php">News</a></li>
-										<li><a href="shop.php">Shop</a></li>
+										<li><a href="index.php">Shop</a></li>
 									</ul>
 								</li>
 								<li><a href="../../view/advice/all_advice.php">Advice</a>
 								</li>
-								<li><a href="../../view/shop.php">Shop</a>
+								<li><a href="../../view/index.php">Shop</a>
 								</li>
 								<li>
 									<div class="header-icons">
@@ -205,7 +205,7 @@ else{
 						<ul>
 							<li><a href="../../index.php">Home</a></li>
 							<li><a href="../../about.php">About</a></li>
-							<li><a href="../../view/shop.php">Shop</a></li>
+							<li><a href="../../view/index.php">Shop</a></li>
 							<li><a href="../../view/advice/all_advice.php">Advice</a></li>
 						</ul>
 					</div>

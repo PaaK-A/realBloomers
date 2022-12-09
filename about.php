@@ -65,7 +65,7 @@
 								</li> -->
 								<li><a href="about.php">About</a></li>
 								<li><a href="view/advice/all_advice.php">Advice</a></li>
-								<li><a href="view/shop.php">Shop</a>
+								<li><a href="view/index.php">Shop</a>
 								</li>
 								<li>
 									<div class="header-icons">

@@ -17,12 +17,12 @@ function pageheader($minititle,$maintitle){?>
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li><a href="../view/shop.php">Home</a>
+								<li><a href="../view/index.php">Home</a>
 								</li>
 								<li><a href="../about.php">About</a></li>
 								<li><a href="../view/advice/all_advice.php">Advice</a>
 								</li>
-								<li><a href="../view/shop.php">Shop</a>
+								<li><a href="../view/index.php">Shop</a>
 								</li>
 								<li>
 									<div class="header-icons">
@@ -108,7 +108,7 @@ function pagefooter(){
 						<ul>
 							<li><a href="../index.php">Home</a></li>
 							<li><a href="../about.php">About</a></li>
-							<li><a href="../view/shop.php">Shop</a></li>
+							<li><a href="../view/index.php">Shop</a></li>
 							<li><a href="../view/advice/all_advice.php">Advice</a></li>
 						</ul>
 					</div>

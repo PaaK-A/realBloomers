@@ -61,12 +61,12 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li><a href="view/shop.php">Home</a>
+								<li><a href="view/index.php">Home</a>
 								</li>
 								<li><a href="about.php">About</a></li>
 								<li><a href="view/advice/all_advice.php">Advice</a>
 								</li>
-								<li><a href="view/shop.php">Shop</a>
+								<li><a href="view/index.php">Shop</a>
 								</li>
 								<li>
 									<div class="header-icons">
@@ -141,7 +141,7 @@
 							<p class="subtitle">Fresh & Organic</p>
 							<h1>Delicious Seasonal Fruits</h1>
 							<div class="hero-btns">
-								<a href="view/shop.php" class="boxed-btn">Products</a>
+								<a href="view/index.php" class="boxed-btn">Products</a>
 								<a href="view/advice/all_advice.php" class="bordered-btn">Plant Care</a>
 							</div>
 						</div>

@@ -27,7 +27,7 @@ include "../controllers/customer_controller.php";
             $_SESSION["loggedin"] = true;
             $_SESSION["cid"] = $emailq['customer_id'];
             $_SESSION["role"] = $emailq['user_role'];  
-            header("location: ../view/shop.php");   
+            header("location: ../view/index.php");   
         }
         else{
             
