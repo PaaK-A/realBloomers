@@ -89,7 +89,7 @@
 
                 <!-- alert box -->
                 <div class="alert" id="alerter" hidden>
-                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  <span class="closebtn" onclick="closebtn()">&times;</span> 
                   <span id="alert"></span>
                 </div>
 
@@ -153,6 +153,11 @@
           }
         });
       }
+    }
+
+    function closebtn(){
+      let alerter=document.getElementById("alerter");
+      alerter.setAttribute("hidden", "true");
     }
   </script>
 

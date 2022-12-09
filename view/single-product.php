@@ -115,7 +115,7 @@ $category_name=$selectcat['cat_name'];
 						</div>
 						<!-- alert box -->
 						<div class="alert success" id="alerter" hidden>
-						<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+						<span class="closebtn" onclick="closebtn()">&times;</span> 
 						<span id="alert"></span>
 						</div>
 					</div>
@@ -152,10 +152,16 @@ $category_name=$selectcat['cat_name'];
 						<a href="cart.php" class="cart-btn" onclick="quickQuantity('<?php echo $row['product_id'] ?>')" id="toCart"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 					</div>
 				</div>
-				<?php endforeach;?>
+				<?php endforeach;?>				
+			</div>
+			<!-- alert box -->
+			<div class="alert success" id="quickaddalerter" hidden>
+			<span class="closebtn" onclick="closebtn()">&times;</span> 
+			<span id="quickaddalert"></span>
 			</div>
 		</div>
 	</div>
+	
 	<!-- end more products -->
 	
 	<!-- comments section -->
@@ -190,6 +196,13 @@ $category_name=$selectcat['cat_name'];
 								<input type="text" placeholder="Your Name" value="<?php echo $customer['customer_name'];?>" id="commentname">
 							</p>
 							<p><textarea name="comment" id="comment" cols="30" rows="10" placeholder="Your Message"></textarea></p>
+
+							<!-- alert box -->
+							<div class="alert success" id="commentalerter" hidden>
+							<span class="closebtn" onclick="closebtn()">&times;</span> 
+							<span id="commentalert"></span>
+							</div>
+
 							<p><input type="submit" value="Submit" onclick="addComment()"></p>
 						</form>
 					</div>
@@ -230,10 +243,12 @@ $category_name=$selectcat['cat_name'];
 </html>
 
 <script type="text/javascript">
+let alerter=document.getElementById("alerter");
+let commentalerter=document.getElementById("commentalerter");
+let quickaddalerter=document.getElementById("quickaddalerter");
 
 function quantittee(){
   event.preventDefault();
-  let alerter=document.getElementById("alerter");
   var qttt=document.getElementById('inputQuantity').value;
   var productid=<?php echo $selectoneP['product_id'] ?>;
 //   alert(qttt);
@@ -279,8 +294,9 @@ function quickQuantity(x){
 		} ,
 		success: function(data,status) {
 			// alert('AJAX call was successful!');
-			//$('#content').html(data);
-			alert(data);
+			quickaddalerter.removeAttribute("hidden");
+            $("#quickaddalert").html(data);
+			// alert(data);
 			//alert(status);
 		},
 		error: function (xhr, ajaxOptions, thrownError) {
@@ -307,7 +323,9 @@ function addComment(){
 		success: function(data,status) {
 			// alert('AJAX call was successful!');
 			//$('#content').html(data);
-			alert(data);
+			// alert(data);
+			commentalerter.removeAttribute("hidden");
+            $("#commentalert").html(data);
 			window.location.reload();
 		},
 		error: function (xhr, ajaxOptions, thrownError) {
@@ -315,5 +333,10 @@ function addComment(){
 			alert(thrownError);
 		}
 	});
+}
+
+function closebtn(){
+	alerter.setAttribute("hidden", "true");
+	quickaddalerter.setAttribute("hidden", "true");
 }
 </script>
