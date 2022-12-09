@@ -108,7 +108,7 @@ $getcustomerID= $_SESSION['cid'];
 										
 										<tr class="table-body-row" onchange="updateCart_fxn('<?php echo $product_id?>') ">
 											<td class="product-remove"><a href="" onclick="removeProduct_fxn(<?php echo $selfromProducts['product_id']; ?>)"><i class="far fa-window-close"></i></a></td>
-											<td class="product-image"><img src="../assets/img/products/product-img-1.jpg" alt=""></td>
+											<td class="product-image"><img src="<?php echo $selfromProducts['product_image'];?>" alt=""></td>
 											<td class="product-name"><?php echo $selfromProducts['product_title'];?></td>
 											<td class="product-price">GHC <?php echo $selfromProducts['product_price'];?></td>
 											<td  class="product-quantity"><input type="number" id="<?php echo $product_id?>" value="<?php echo $row['qty'];?>" min="1"></td>

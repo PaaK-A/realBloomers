@@ -112,7 +112,7 @@ $category_name=$selectcat['cat_name'];
 				<div class="col-lg-4 col-md-6 text-center">
 					<div class="single-product-item">
 						<div class="product-image">
-							<a href="single-product.html"><img src="<?php echo $row['product_image'];?>" alt="" height="261"></a>
+							<a href="single-product.php?pid=<?php echo $row['product_id'];?>"><img src="<?php echo $row['product_image'];?>" alt="" height="261"></a>
 						</div>
 						<h3><?php echo $row['product_title'];?></h3>
 						<p class="product-price"><span></span>GHC <?php echo $row['product_price']; ?> </p>
