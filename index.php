@@ -1,4 +1,6 @@
-<?php include("controllers/product_contrroller.php");?>
+<?php 
+include_once("controllers/product_contrroller.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -273,6 +275,7 @@
 						<p>In addition to our wide selection of plants, we also offer a range of accessories and supplies to help you create the perfect home for your plants. From pots and planters to fertilizers and soil amendments, we have everything you need to give your plants the care and attention they deserve. We also offer a subscription service, where you can receive a new plant delivered to your door every month. Try it out and discover the joy of adding new plants to your collection on a regular basis.</p>
 
 						<p>At Bloomers, we believe that plants have the power to transform any space into a more vibrant and inviting place. Whether you're looking for a small potted plant to add some color to your desk, or a larger plant to make a statement in your living room, we have something for everyone. We also offer care guides and tips to help you keep your plants healthy and happy. Shop now and start blooming with Bloomers.</p>
+						
 						<a href="about.php" class="boxed-btn mt-4">Know more</a>
 					</div>
 				</div>
@@ -282,98 +285,23 @@
 	<!-- end advertisement section -->
 
 	<!-- latest news -->
-	<div class="latest-news pt-60 pb-150">
+	<div class="latest-news pt-60 pb-100">
 		<div class="container">
 
 			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-title">	
-						<h3><span class="orange-text">Our</span> Advice</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
+				<div class="col-lg-12 col-md-24">
+					<div class="abt-text">
+						<h2><span class="orange-text">Our</span> Advice</h2>
+						<p>At Bloomers, we offer expert advice on how to care for your plants, whether they are organic or inorganic. Our tips and tricks will help you keep your plants healthy and thriving, and our wide selection of tools will ensure that you have everything you need to maintain your garden. From fertilizers to pruning shears, we have everything you need to keep your plants looking their best. Loook through our many posts to learn more about our plant care advice and products.</p>
+						<p>At Bloomers, we understand that taking care of plants can be challenging, especially if you are new to gardening. That's why we offer a range of advice and tips on how to care for your plants, from choosing the right soil to providing the right amount of sunlight and water. We also offer a selection of high-quality tools, including pruning shears, watering cans, and fertilizers, to help you keep your plants healthy and happy. With our expert advice and premium products, you can be confident in your ability to successfully care for your plants</p>
+						<a href="view/all_advice.php" class="boxed-btn">More Advice</a>
 					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-2"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">A man's worth has its season, like tomato.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-3"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">Good thoughts bear good fresh juicy fruit.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<a href="view/all_advice.php" class="boxed-btn">More Advice</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- end latest news -->
 
-	<!-- logo carousel -->
-	<div class="logo-carousel-section" hidden>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="logo-carousel-inner">
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/1.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/2.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/3.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/4.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/5.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end logo carousel -->
 
 	<!-- footer -->
 	<div class="footer-area">
@@ -428,17 +356,6 @@
 				<div class="col-lg-6 col-md-12">
 					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.</p>
 				</div>
-				<!-- <div class="col-lg-6 text-right col-md-12">
-					<div class="social-icons">
-						<ul>
-							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
-						</ul>
-					</div>
-				</div> -->
 			</div>
 		</div>
 	</div>
