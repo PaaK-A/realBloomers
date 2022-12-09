@@ -225,4 +225,22 @@ function sel_order_ctr(){
 
     return $order_id -> sel_order();
 }
+
+/**comments */
+
+//-INSERT comments--//
+function addComment_ctr($product_ID,$customer_ID,$Username,$Content){
+    $addItem= new product_class();
+
+    return $addItem->addComment_cls($product_ID,$customer_ID,$Username,$Content);
+    
+}
+
+//--SELECT ALL--//
+function selectAllComments_ctr($product_ID){
+    $selectAll= new product_class();
+
+    return $selectAll->selectAllComments_cls($product_ID);
+    
+}
 ?>

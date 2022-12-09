@@ -1,7 +1,30 @@
 <?php 
 include_once("../controllers/product_contrroller.php");
+include_once("../controllers/customer_controller.php");
 include("../navbars/header.php");
+include_once("../settings/core.php");
 
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+
+    if($_SESSION["role"] == 1){ 
+        //echo "Hello admin";
+        $role= "ADMIN";
+    }
+
+    else{ 
+        //echo "You are not ADMIN.";
+        $role= "User";
+        //echo '<a href="l../login/login.php"">Login</a>';
+    }
+}
+
+else{
+    header("location: ../login/login.php");
+}
+
+$getcustomerid=$_SESSION['cid'];
+$customer= selectACustomer_ctr($getcustomerid);
+// echo $getcustomerid;
 $getadviceID= $_GET['aid'];
 $advice=selectOneAdvice_ctr($getadviceID);
 $productid= $advice['product_id'];
@@ -77,33 +100,9 @@ $keywordsarray = explode(" ", $keywords);
 							<p><?php echo $advice['productcare_info']; ?></p>
 						</div>
 
-						<div class="comments-list-wrap">
-							<h3 class="comment-count-title">3 Comments</h3>
-							<div class="comment-list">
-								<div class="single-comment-body">
-									<div class="comment-user-avater">
-                                        <i class="fa-regular fa-circle-user fa-3x"></i>
-									</div>
-									<div class="comment-text-body">
-										<h4>Jenny Joe <span class="comment-date">Aprl 26, 2020</span></h4>
-										<p>Nunc risus ex, tempus quis purus ac, tempor consequat ex. Vivamus sem magna, maximus at est id, maximus aliquet nunc. Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus.</p>
-									</div>
-								</div>
-							</div>
-						</div>
+						
 
-						<div class="comment-template">
-							<h4>Leave a comment</h4>
-							<p>If you have a comment dont feel hesitate to send us your opinion.</p>
-							<form action="index.html">
-								<p>
-									<input type="text" placeholder="Your Name">
-									<input type="email" placeholder="Your Email">
-								</p>
-								<p><textarea name="comment" id="comment" cols="30" rows="10" placeholder="Your Message"></textarea></p>
-								<p><input type="submit" value="Submit"></p>
-							</form>
-						</div>
+						
 					</div>
 				</div>
 				<div class="col-lg-4">
@@ -161,3 +160,8 @@ $keywordsarray = explode(" ", $keywords);
 
 </body>
 </html>
+
+<script>
+   
+    
+  </script>

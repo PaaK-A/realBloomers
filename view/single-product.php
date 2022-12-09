@@ -1,8 +1,12 @@
 <?php 
+include_once("../settings/core.php");
 include_once("../controllers/product_contrroller.php");
 include("../navbars/header.php");
+include_once("../controllers/customer_controller.php");
 
 $getproductID= $_GET['pid'];
+$getcustomerid=$_SESSION['cid'];
+$customer= selectACustomer_ctr($getcustomerid);
 $selectoneP=selectAProduct_ctr($getproductID);
 $productcatid=$selectoneP['product_cat'];
 $selectcat= selectACategory_ctr($productcatid);
@@ -93,7 +97,7 @@ $category_name=$selectcat['cat_name'];
 	<!-- end single product -->
 
 	<!-- more products -->
-	<div class="more-products mb-150">
+	<div class="more-products">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
@@ -124,34 +128,47 @@ $category_name=$selectcat['cat_name'];
 		</div>
 	</div>
 	<!-- end more products -->
-
-	<!-- logo carousel -->
-	<!-- <div class="logo-carousel-section">
+	
+	<!-- comments section -->
+	<div class="single-product mb-150">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<div class="logo-carousel-inner">
-						<div class="single-logo-item">
-							<img src="../assets/img/company-logos/1.png" alt="">
+				<div class="col-lg-8">
+					<div class="single-article-section">
+						<div class="comments-list-wrap">
+							<h3 class="comment-count-title">3 Comments</h3>
+							<div class="comment-list">
+								<?php foreach(selectAllComments_ctr($selectoneP['product_id']) as $comment):?>
+								<div class="single-comment-body">
+									<div class="comment-user-avater">
+										<i class="fa-regular fa-circle-user fa-3x"></i>
+									</div>
+									<div class="comment-text-body">
+										<h4><?php echo $comment['username_comment'];?><span class="comment-date"><?php echo $comment['date'];?></span></h4>
+										<p><?php echo $comment['comment_content'];?></p>
+									</div>
+								</div>
+								<?php endforeach;?>
+							</div>
 						</div>
-						<div class="single-logo-item">
-							<img src="../assets/img/company-logos/2.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="../assets/img/company-logos/3.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="../assets/img/company-logos/4.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="../assets/img/company-logos/5.png" alt="">
-						</div>
+					</div>
+
+					<div class="comment-template">
+						<h4>Leave a comment</h4>
+						<p>If you have a comment dont feel hesitate to send us your opinion.</p>
+						<form>
+							<p>
+								<input type="text" placeholder="Your Name" value="<?php echo $customer['customer_name'];?>" id="commentname">
+							</p>
+							<p><textarea name="comment" id="comment" cols="30" rows="10" placeholder="Your Message"></textarea></p>
+							<p><input type="submit" value="Submit" onclick="addComment()"></p>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div> -->
-	<!-- end logo carousel -->
+	</div>
+	<!-- end comments section -->
 
 	<!-- footer -->
 	<?php pagefooter(); ?>
@@ -177,6 +194,8 @@ $category_name=$selectcat['cat_name'];
 	<script src="../assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="../assets/js/main.js"></script>
+	<!-- font awesome  -->
+	<script src="https://kit.fontawesome.com/78711647c2.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
@@ -239,4 +258,30 @@ function quickQuantity(x){
 	});
   
 }  
+
+
+function addComment(){
+	event.preventDefault();
+	//alert("yes")
+	$.ajax({
+		type: 'POST',
+		url: '../actions/add_comment.php',
+		data:  {
+		pid: <?php echo $getproductID?>,
+		cusid: <?php echo $getcustomerid?>,
+		username: $("#commentname").val(),
+		content: $("#comment").val(),
+		} ,
+		success: function(data,status) {
+			// alert('AJAX call was successful!');
+			//$('#content').html(data);
+			alert(data);
+			window.location.reload();
+		},
+		error: function (xhr, ajaxOptions, thrownError) {
+			alert("Error:"+xhr.status);
+			alert(thrownError);
+		}
+	});
+}
 </script>

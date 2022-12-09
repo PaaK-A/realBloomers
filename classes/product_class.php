@@ -303,5 +303,28 @@ class product_class extends db_connection{
         return $this -> db_fetch_one($sql);
     }
 
+	/**comments */
+
+	//-INSERT comments--//
+	public function addComment_cls($product_id,$customer_id,$username,$content){
+		//write query
+		
+		$insertsql = "INSERT INTO comments(pid,cid,username_comment,comment_content) VALUES ('$product_id','$customer_id','$username','$content')";
+        
+		//execute 	
+		//print $insertsql;
+		return $this -> db_query($insertsql);
+	}
+
+	//--SELECT All for specfic product--//
+	public function selectAllComments_cls($product_id){
+		//write query
+		
+		$selallsql = "SELECT * FROM comments WHERE pid = '$product_id'";
+
+		//execute 	
+		return $this -> db_fetch_all($selallsql);
+	}
+
 }
 ?>
