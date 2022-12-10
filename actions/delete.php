@@ -35,6 +35,7 @@ else if($productID){
         // echo '<script>alertRedirect_view("Product Deleted","cart.php")</script>';
         header("location: ../admin/products_form.php");
     }
+}
 else if($adviceID){
     if(delete_ctr('advice','advice_id',$adviceID)!= NULL){
         echo "deleted";
@@ -44,7 +45,6 @@ else if($adviceID){
     else{
         echo "Not Deleted";
     }
-}
 }
 else{
     echo "Unable to perform delete function right now. Please try again later.";
