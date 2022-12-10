@@ -4,6 +4,7 @@ include("../controllers/general_controller.php");
 $categoryID=$_GET['cid'];
 $brandID=$_GET['bid'];
 $productID=$_GET['pid'];
+$adviceID=$_GET['aID'];
 
 // echo $categoryID;
 
@@ -34,6 +35,16 @@ else if($productID){
         // echo '<script>alertRedirect_view("Product Deleted","cart.php")</script>';
         header("location: ../admin/products_form.php");
     }
+else if($adviceID){
+    if(delete_ctr('advice','advice_id',$adviceID)!= NULL){
+        echo "deleted";
+        // echo '<script>alertRedirect_view("Product Deleted","cart.php")</script>';
+        header("location: ../admin/advice_form.php");
+    }
+    else{
+        echo "Not Deleted";
+    }
+}
 }
 else{
     echo "Unable to perform delete function right now. Please try again later.";
