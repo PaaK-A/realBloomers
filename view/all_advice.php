@@ -91,7 +91,7 @@ $selectall=selectAllAdvice_ctr();
 								<span class="author"><i class="fas fa-user"></i> Admin</span>
 								<span class="date"><i class="fas fa-calendar"></i><?php echo $row['date'];?></span>
 							</p>
-							<p class="excerpt"><?php echo $row['productcare_info'];?></p>
+							<p class="excerpt"></p>
 							<a href="single_advice.php?aid=<?php echo $row['advice_id'];?>" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>

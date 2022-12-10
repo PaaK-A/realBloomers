@@ -265,7 +265,7 @@ $invoice_num=mt_rand(100000,999999);
         event.preventDefault();
         let handler = PaystackPop.setup({
 
-            key: 'pk_test_100119966e976d57e253930b199f7065fa2c1ed8', // Replace with your public key
+            key: 'pk_live_bd5356607a881f3a0d6843b75d3172b74b9675cd', // Replace with your public key
             email: customeremail,
             amount: 1,
             currency: 'GHS',

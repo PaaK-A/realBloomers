@@ -111,7 +111,7 @@ $keywordsarray = explode(" ", $keywords);
                                 <?php endforeach;?>
 							</ul>
 						</div>
-						<div class="tag-section">
+						<div class="tag-section" hidden>
 							<h4>Tags</h4>
 							<ul>
                                 <?php foreach($keywordsarray as $keyword):?>
