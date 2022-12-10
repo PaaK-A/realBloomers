@@ -205,10 +205,10 @@ class product_class extends db_connection{
 
 	
 	//-INSERT advice--//
-	public function addAdvice_cls($plantid,$careinfo){
+	public function addAdvice_cls($plantid,$advicetitle,$careinfo){
 		//write query
 		
-		$insertsql = "INSERT INTO advice(product_id,productcare_info) VALUES ('$plantid','$careinfo')";
+		$insertsql = "INSERT INTO advice(product_id,productcare_title,productcare_info) VALUES ('$plantid','$advicetitle','$careinfo')";
         
 		//execute 	
 		//print $insertsql;

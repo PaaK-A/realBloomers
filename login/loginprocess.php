@@ -39,7 +39,7 @@ include "../controllers/customer_controller.php";
             $_SESSION["loggedin"] = true;
             $_SESSION["cid"] = $emailq['customer_id'];
             $_SESSION["role"] = $emailq['user_role'];   
-            header("location: ../index.php"); 
+            header("location: ../admin/category_form.php"); 
         }
     }
 

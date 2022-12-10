@@ -149,10 +149,10 @@ ADVICE
 */
 
 //--INSERT product cls--//
-function addAdvice_ctr($plantID,$careInfo){
+function addAdvice_ctr($plantID,$adviceTitle,$careInfo){
     $addItem= new product_class();
 
-    return $addItem->addAdvice_cls($plantID,$careInfo);
+    return $addItem->addAdvice_cls($plantID,$adviceTitle,$careInfo);
     
 }
 
