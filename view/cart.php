@@ -283,7 +283,7 @@ $getcustomerID= $_SESSION['cid'];
 				// alert('AJAX call was successful!');
 				// $('#alert-box').html(data);
 				window.location.reload();
-				alert(data);
+				// alert(data);
 				//alert(status);
 				
 			},

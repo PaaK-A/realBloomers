@@ -171,7 +171,7 @@ $category_name=$selectcat['cat_name'];
 				<div class="col-lg-8">
 					<div class="single-article-section">
 						<div class="comments-list-wrap">
-							<h3 class="comment-count-title">3 Comments</h3>
+							<h3 class="comment-count-title">Comments</h3>
 							<div class="comment-list">
 								<?php foreach(selectAllComments_ctr($selectoneP['product_id']) as $comment):?>
 								<div class="single-comment-body">
